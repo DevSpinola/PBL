@@ -1,0 +1,128 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/PBL.styles.css" asp-append-version="true" />
+    <style>
+        body {
+            background-color: #333; /* Alterando para um cinza escuro */
+            color: white; /* Definindo a cor do texto como branco para contraste */
+            font-family: 'Montserrat', sans-serif;
+            background-color: #333; /* Alterando para um cinza escuro */
+            color: white; /* Definindo a cor do texto como branco para contraste */
+        }
+
+        .navbar {
+            background-color: #001f3f !important; /* Azul marinho escuro */
+        }
+
+        .navbar-brand {
+            text-align: center; /* Centralizando o texto do cabeçalho */
+            width: 100%; /* Ocupando toda a largura disponível */
+            color: white !important; /* Letras brancas */
+        }
+
+        .navbar-nav .nav-link {
+            color: white !important; /* Letras brancas */
+        }
+
+            .navbar-nav .nav-link:hover {
+                text-shadow: 0 0 5px #0074D9; /* Contorno luminoso azul claro ao passar o mouse */
+                color: #0074D9 !important; /* Mudando a cor ao passar o mouse */
+            }
+        /* Novos estilos para o modal */
+        .modal-header {
+            border-bottom: none;
+        }
+
+        .modal-content {
+            box-shadow: 0px 0px 10px 0px white;
+            text-align: center;
+            color: white;
+        }
+
+        .modal-body {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container-fluid">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1 text-center">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index" style="white-space: nowrap;">Início</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy" style="white-space: nowrap;">Explicação dos Cálculos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="BancoDeDados" style="white-space: nowrap;">Banco de Dados - Ângulos</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted" style="background-color: #001f3f;">
+        <div class="container" style="text-align: center; color: white;">
+           PBL - Bruna Menezes | Guilherme Spinola | James Mauch | Luisa Jacob - EC 3 - 2023
+        </div>
+    </footer>
+
+
+
+    <!-- Modal -->
+    <div class="modal" id="myModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content bg-dark text-white">
+                <div class="modal-header border-white text-align:center;">
+                    <h4 class="modal-title">Trabalho desenvolvido por:</h4>
+                </div>
+                <div class="modal-body" style="font-size: 1.2em; text-align: center;">
+                    <p>Bruna Menezes</p>
+                    <p>Guilherme Spinola</p>
+                    <p>James Mauch</p>
+                    <p>Luisa Jacob</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-light" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+
+    <script>
+        window.onload = function () {
+            const modalShown = localStorage.getItem('modalShown');
+
+            if (!modalShown) {
+                $('#myModal').modal('show');
+                localStorage.setItem('modalShown', 'true');
+            }
+        };
+    </script>
+</body>
+</html>

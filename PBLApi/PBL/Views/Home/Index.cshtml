@@ -1,0 +1,61 @@
+﻿@{
+    ViewData["Title"] = "Lançamento Balístico";
+}
+
+<div class="text-center">
+    <h1 class="display-4">PBL - Lançamento Balístico</h1>
+    <p></p>
+    <p></p>
+    <p>Projeto desenvolvido para a N2 do segundo bimestre das disciplinas:<p>
+    <p>Programação Orientada a Objetos<p>
+    <p>Física Geral e Experimental<p>
+    <p>Cálculo Avançado<p>
+    <p>Banco de Dados II<p>
+</div>
+
+<div class="text-center mt-5">
+    <h3>Insira as informações solicitadas abaixo:</h3>
+    <p></p>
+    <div class="row justify-content-center">
+        <!-- Primeira caixa -->
+        <div class="col-md-4">
+            <div class="card bg-dark">
+                <div class="card-body">
+                    <form id="formCalculo" method="post" onsubmit="return EnviaDados('formCalculo', event)">
+                        <div class="form-group">
+                            <label for="anguloInput">Insira o ângulo de lançamento do canhão:</label>
+                            <p></p>
+                            <input type="number" class="form-control" id="anguloInput" name="angulo" required />
+                        </div>
+                        <p></p>
+                        <div class="form-group">
+                            <label for="alturaInput">Altura Inicial do Meteoro (em metros):</label>
+                            <p></p>
+                            <input type="number" class="form-control" id="alturaInput" name="altura" required value="150" />
+                        </div>
+                        <p></p>
+                        <div class="form-group">
+                            <label for="distanciaInput">Distância Horizontal Canhão - Meteoro:</label>
+                            <p></p>
+                            <input type="number" class="form-control" id="distanciaInput" name="distancia" required value="100" />
+                        </div>
+                        <p></p>
+                        <div class="form-group">
+                            <label for="velocidadeInput">Velocidade de Queda do Meteoro (em m/s):</label>
+                            <p></p>
+                            <input type="number" class="form-control" id="velocidadeInput" name="velocidade" required value="20" />
+                            <p></p>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="background-color: #0074D9; border: 1px solid black;">
+                            Calcular dados de lançamento
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <script src="~/js/EnviaDados.js"></script>
+    </div>
+</div>
+
+    
+        

@@ -1,0 +1,29 @@
+﻿@{
+    ViewData["Title"] = "Grafico";
+}
+
+<div class="text-center">
+    <h1>@ViewData["Title"]</h1>
+    <p>Demonstração Visual:</p>
+    <script src="~/js/RecebeColisao.js"></script>
+
+    <!-- Adicionando uma div para exibir os resultados -->
+    <div id="Colisao1">
+        <img src="/animacoes/colisao@(ViewBag.Resultado1).gif" alt="Colisao 1">
+    </div>
+
+    <!-- Caso nao tenha a 2 colisao nao vai mostrar nada depois do If -->
+    @if (!string.IsNullOrEmpty(ViewBag.Resultado2))
+    {
+        <div id="Colisao2">
+            <img src="/animacoes/colisao@(ViewBag.Resultado2).gif" alt="Colisao 2">
+        </div>
+    }
+
+    <!-- Chamar a função e exibir os resultados -->
+    <script>
+       
+       console.log(@ViewBag.Resultado1)
+        console.log(@ViewBag.Resultado2)
+    </script>
+</div>

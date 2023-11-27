@@ -1,0 +1,27 @@
+﻿<div class="container">
+    @{
+        ViewData["Title"] = "Explicação dos Cálculos";
+    }
+
+    <h1 style="text-align: center;">@ViewData["Title"]</h1>
+    <p></p>
+
+    <p style="text-align: left; text-align: justify;">
+        Os cálculos foram realizados com a utilização das séries de McLaurin, conforme o <a href="https://drive.google.com/file/d/1iIWehmZpcfJ7htdiGT5GjUArwl9rQ7Mt/view?usp=drive_link">código fonte</a>.<br><br>
+        <a href="https://drive.google.com/file/d/1p2aTHYgMyrc1udJu7DwHf5wd2fA__I-1/view?usp=drive_link">Na parte de física:</a> Cálculo dos coeficientes da equação de segundo grau: A equação a * t^2 + b * t + c = 0 é derivada das equações de movimento, onde:<br><br>
+
+        "a" representa metade da aceleração devido à gravidade (g / 2).<br>
+        "b" é a velocidade inicial no eixo vertical, considerando a velocidade inicial (vm) e o ângulo de lançamento.<br>
+        "c" é a altura inicial (h) menos a altura inicial do objeto no eixo vertical.<br><br>
+
+        - Cálculo do discriminante (delta): O valor de delta é calculado para determinar o número e o tipo de soluções para a equação de segundo grau. Se delta for negativo, não há raízes reais, o que indica que o objeto não atingirá a altura especificada.<br><br>
+
+        - Cálculo do tempo de voo (t1 e t2): São determinados os tempos que o objeto leva para atingir o solo novamente (duas possíveis soluções devido à natureza quadrática da equação).<br><br>
+
+        - Cálculo da velocidade inicial nos eixos horizontal (vo1 e vo2): É calculada a velocidade inicial na direção horizontal usando a fórmula da velocidade constante (velocidade = distância/tempo).<br><br>
+
+        - Cálculo da altura máxima (y1 e y2): Determina a altura máxima alcançada pelo objeto no eixo vertical.<br><br>
+
+        Determinação do movimento (mov1 e mov2): Comparações entre o tempo de voo e o tempo de subida para determinar se o objeto está ascendendo, atingiu o ponto máximo ou está descendendo.
+    </p>
+</div>
