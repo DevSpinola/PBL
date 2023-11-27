@@ -40,11 +40,15 @@ def simulacao_animada(velocidade_inicial, angulo, tempo_total, intervalo_tempo, 
     plt.xlabel('Posição X (metros)')
     plt.ylabel('Posição Y (metros)')
     plt.legend()
-    diretorio = '../PBLApi/PBL/wwwroot/animacoes/'+ nomeArquivo+'.gif'  
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    diretorio = os.path.join(script_dir, '..', 'PBLApi', 'PBL', 'wwwroot', 'animacoes', nomeArquivo + '.gif')    
     if not (os.path.exists(diretorio)): 
-        animacao.save(diretorio, writer='pillow', fps=30)
-        print('Animação Salva com sucesso!')
-        time.sleep(1)
+        try:
+            animacao.save(diretorio, writer='pillow', fps=30)
+            print('Animação Salva com sucesso!')
+            time.sleep(1)
+        except Exception as e:
+            print(f"Erro ao salvar a animação: {e}")
     else:
         print(f'O arquivo {nomeArquivo}.gif já existe.')   
     
