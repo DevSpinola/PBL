@@ -4,7 +4,7 @@
 - Faça a correta manutenção da connectionString dentro do arquivo appSettings.json
 - Verifique se todas as bibliotecas em python estão instaladas em seu ambiente
 - Após verificar os passos anteriores execute o programa principal no Visual Studio
-  Atenção: O Programa não funcionará corretamente se a Api não estiver rodando e estiver conectada corretamente ao Banco!!!!
+  - Atenção: O Programa não funcionará corretamente se a Api não estiver rodando e estiver conectada corretamente ao Banco!!!!
  ### Este trabalho utiliza uma aplicação ASPNET Core 6.0, Arquitetura MVC, EntityFramework C#, Python, SQLServer, JavaScript, HTML/CSS
  ## Informações Gerais: 
 - Objetivo do programa é calcular as possibilidades de um projétil acertar um meteoro caindo em velocidade constante, segundo teorias da cinemática
