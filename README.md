@@ -1,6 +1,6 @@
 # PBL Trabalho Interdisciplinar - Faculdade Engenheiro Salvador Arena
 ## LEIA ANTES DE TENTAR MEXER
-- Para executar corretamente primeiro crie o banco com o script pré montado em seu SQL Server
+- Para executar corretamente primeiro crie o banco com o script 'ScriptCriaBancoPBL' pré montado em seu SQL Server
 - Faça a correta manutenção da connectionString dentro do arquivo appSettings.json
 - Verifique se todas as bibliotecas em python estão instaladas em seu ambiente
 - Após verificar os passos anteriores execute o programa principal no Visual Studio
