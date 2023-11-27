@@ -9,8 +9,8 @@
  ## Informações Gerais: 
 - Objetivo do programa é calcular as possibilidades de um projétil acertar um meteoro caindo em velocidade constante, segundo teorias da cinemática
 - Os cálculos trigonométricos do Programa são feitos utilizando os conceitos de Série de Taylor
-- Esse programa possui uma Api e é moldado com 3 clasess: Projetil, Meteoro e Colisão
-- A Api possui apenas os Métodos POST e GET específicos de acordo com as Models
+- Esse programa possui uma Api e é moldado com 3 classes: Projetil, Meteoro e Colisão
+- A Api possui apenas os métodos POST e GET específicos de acordo com as Models
 - Toda a comunicação entre os arquivos é feito por meio da API em C#
 - Todos os cálculos e devolutivas são comandados pela API
 - A Geração das Animações foram feitas em python, utilizando MatplotLibAnimation
